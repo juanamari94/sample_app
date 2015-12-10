@@ -223,7 +223,8 @@ aside {
 
 .gravatar {
   float: left;
-  padding-left: 15px;
+  padding-left: 15px; // in case of css fire delete this line
+  padding-right: 10px; // in case of css fire delete this line
 }
 
 .gravatar_edit {
