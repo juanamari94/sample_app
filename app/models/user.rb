@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
                     format: { with: VALID_EMAIL_REGEX},
                     uniqueness: { case_sensitive: false }
   has_secure_password
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true # Still doesn't allow blank passwords on signup because has_secure_password has validations for that. Only workds on edit to keep password.
   
   # Returns the hash digest of a given string.
   def User.digest(string)
